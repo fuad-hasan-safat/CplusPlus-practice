@@ -6,6 +6,11 @@ void swap(int &a, int &b){
     b = a - b;
     a = a - b;
 }
+void swap(string &a, string &b){
+    string temp = a;
+    a = b;
+    b = temp;
+}
 
 int main(int argc, char const *argv[])
 {
