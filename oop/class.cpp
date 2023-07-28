@@ -2,15 +2,15 @@
 
 class User
 {
-    std::string first_name;
-    std::string last_name;
-    std::string get_status()
-    {
-        return status;
-    }
-
-    private:
-        std::string status = "Gold";
+    std::string status = "Gold";
+    
+    public:
+        std::string first_name;
+        std::string last_name;
+        std::string get_status()
+        {
+            return status;
+        }   
 };
 
 int main(int argc, const char** argv) {
