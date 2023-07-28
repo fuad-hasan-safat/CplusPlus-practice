@@ -23,22 +23,34 @@ int add_user_if_not_exists(std::vector<User> &users, User user)
         {
             return i; /*returning index*/
         }
-        users.push_back(user)
-        return users.size() -1 ; /*returning index*/
-        
     }
-    
+    users.push_back(user);
+    return users.size() -1 ; /*returning index*/
 }
 
 int main(int argc, const char** argv) {
-    User me;
-    me.first_name = "Fuad Hasan";
-    me.last_name = "Hasan";
+    // User me;
+    // me.first_name = "Fuad Hasan";
+    // me.last_name = "Hasan";
+
+    // std::cout<<users[0].first_name<<std::endl;
+    
+    User user1, user2, user3;
+    user1.first_name = "Fuad";
+    user1.last_name = "Hasan";
+    user2.first_name = "Abujar";
+    user2.last_name = "Uddin";
+    user3.first_name = "Nadiya";
+    user3.last_name = "Sarkar";
     std::vector<User> users;
-    users.push_back(me);
+    users.push_back(user1);
+    users.push_back(user2);
+    users.push_back(user3);
 
-    std::cout<<users[0].first_name<<std::endl;
+    User user;
+    user.first_name = "Fuad";
+    user.last_name = "Hasan";
 
-
-    return 0;
+    std::cout<<add_user_if_not_exists(users, user)<<std::endl;
+    return 0;      
 } 
