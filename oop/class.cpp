@@ -16,11 +16,16 @@ class User
         {
             std::cout<<"Constructor\n";
         }
-        User(std::string first_name, std::string last_name) 
+        User(std::string first_name, std::string last_name, std::string status) 
         {
             this->first_name = first_name;
             this->last_name = first_name;
-        }  
+            this->status = status;
+        } 
+        ~User()
+        {
+            std::cout<<"Default output\n";
+        } 
 };
 
 int add_user_if_not_exists(std::vector<User> &users, User user)
@@ -61,7 +66,7 @@ int main(int argc, const char** argv) {
     // user.last_name = "Hasan";
 
     // std::cout<<add_user_if_not_exists(users, user)<<std::endl;
-    User user("Fuad","Hasan");
-    std::cout<<user.first_name<<std::endl;
+    User user("Fuad","Hasan","Diamond");
+    std::cout<<user.get_status()<<std::endl;
     return 0;      
 } 
