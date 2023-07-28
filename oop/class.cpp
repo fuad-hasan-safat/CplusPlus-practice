@@ -1,6 +1,6 @@
 #include<iostream>
 
-struct User
+class User
 {
     std::string first_name;
     std::string last_name;
