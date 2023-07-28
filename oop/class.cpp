@@ -14,6 +14,22 @@ class User
         }   
 };
 
+int add_user_if_not_exists(std::vector<User> &users, User user)
+{
+    for (int i = 0; i < users.size(); i++)
+    {
+        if (users[i].first_name == user.first_name &&
+            users[i].last_name == user.last_name)
+        {
+            return i; /*returning index*/
+        }
+        users.push_back(user)
+        return users.size() -1 ; /*returning index*/
+        
+    }
+    
+}
+
 int main(int argc, const char** argv) {
     User me;
     me.first_name = "Fuad Hasan";
