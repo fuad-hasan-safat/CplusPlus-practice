@@ -1,9 +1,10 @@
 #include<iostream>
+#include<vector>
 
 class User
 {
     std::string status = "Gold";
-    
+
     public:
         std::string first_name;
         std::string last_name;
@@ -17,10 +18,11 @@ int main(int argc, const char** argv) {
     User me;
     me.first_name = "Fuad Hasan";
     me.last_name = "Hasan";
-    
+    std::vector<User> users;
+    users.push_back(me);
 
-    std::cout << "First Name: "<< me.first_name << std::endl;
-    std::cout << "Status: "<< me.get_status() << std::endl;
+    std::cout<<users[0].first_name<<std::endl;
+
 
     return 0;
 } 
