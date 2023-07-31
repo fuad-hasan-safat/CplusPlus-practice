@@ -42,7 +42,6 @@ class User
         } 
         ~User()
         {
-            std::cout<<"Default output\n";
             user_count--;
         } 
 };
@@ -89,5 +88,11 @@ int main(int argc, const char** argv) {
     // std::cout<<add_user_if_not_exists(users, user)<<std::endl;
     User user("Fuad","Hasan","Diamond");
     std::cout<<user.get_status()<<std::endl;
+
+    User user1, user2, user3, user4;
+
+    std::cout<<User::get_user_count()<<std::endl;
+    user1.~User();
+    std::cout<<User::get_user_count()<<std::endl;
     return 0;      
 } 
